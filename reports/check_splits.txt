@@ -1,0 +1,27 @@
+fold label  train_rows  mismatch_with_embargo  train_rows_no_embargo  mismatch_no_embargo
+valid1  y_1h      752688                      0                 752788                    0
+valid1  y_3h      752688                      0                 752788                    5
+valid1  y_6h      752688                      0                 752788                   19
+valid2  y_1h      758299                      0                 758405                    0
+valid2  y_3h      758299                      0                 758405                    9
+valid2  y_6h      758299                      0                 758405                   25
+valid3  y_1h      764025                      0                 764133                    0
+valid3  y_3h      764025                      0                 764133                   11
+valid3  y_6h      764025                      0                 764133                   31
+valid4  y_1h      769802                      0                 769898                    0
+valid4  y_3h      769802                      0                 769898                    0
+valid4  y_6h      769802                      0                 769898                    0
+ test1  y_1h      775511                      0                 775612                    0
+ test1  y_3h      775511                      0                 775612                    5
+ test1  y_6h      775511                      0                 775612                   13
+ test2  y_1h      781105                      0                 781208                    0
+ test2  y_3h      781105                      0                 781208                    2
+ test2  y_6h      781105                      0                 781208                    9
+ test3  y_1h      786676                      0                 786768                    0
+ test3  y_3h      786676                      0                 786768                    9
+ test3  y_6h      786676                      0                 786768                   13
+ test4  y_1h      792256                      0                 792353                    0
+ test4  y_3h      792256                      0                 792353                    6
+ test4  y_6h      792256                      0                 792353                    7
+
+OK: no leakage with embargo; the check detects leakage without it.

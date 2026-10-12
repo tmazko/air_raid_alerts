@@ -1,0 +1,169 @@
+
+================================================================================
+1. Cleaning
+================================================================================
+Raw rows: 299,275
+After dropping exact duplicates: 185,430
+Union levels: ('oblast', 'raion') -> 164,618 rows
+Oblasts dropped (< 100 rows in used levels): {'Luhanska oblast': 1}
+Oblasts kept: 24
+
+================================================================================
+2. Union alarm intervals
+================================================================================
+Source rows: 164,617 -> union events: 87,763
+                         events  merged_rows  rows_per_event
+oblast                                                      
+Kharkivska oblast          8833        22207            2.51
+Zaporizka oblast           8191        14195            1.73
+Donetska oblast            7910        13789            1.74
+Dnipropetrovska oblast     7109        17508            2.46
+Sumska oblast              6083        13531            2.22
+Poltavska oblast           5868         9735            1.66
+Mykolaivska oblast         5455         7677            1.41
+Khersonska oblast          5226         7894            1.51
+Kirovohradska oblast       4601         7187            1.56
+Chernihivska oblast        4182         9854            2.36
+Odeska oblast              4068         9042            2.22
+Cherkaska oblast           3551         6247            1.76
+Kyivska oblast             3056         6889            2.25
+Kyiv City                  2267         2267            1.00
+Zhytomyrska oblast         1962         2842            1.45
+Vinnytska oblast           1813         3133            1.73
+Khmelnytska oblast         1260         1610            1.28
+Rivnenska oblast           1122         1589            1.42
+Ternopilska oblast          958         1187            1.24
+Volynska oblast             934         1239            1.33
+Chernivetska oblast         870         1081            1.24
+Lvivska oblast              849         1408            1.66
+Ivano-Frankivska oblast     841         1306            1.55
+Zakarpatska oblast          754         1200            1.59
+
+================================================================================
+3. Union event duration (hours)
+================================================================================
+count    87763.000000
+mean         1.648037
+std          2.919922
+min          0.000556
+25%          0.442778
+50%          0.734167
+75%          1.749167
+max        122.711111
+dtype: float64
+0.500     0.734167
+0.900     3.727111
+0.990    12.461450
+0.999    29.360037
+dtype: float64
+
+Top 10 longest union events:
+                       oblast                started_at               finished_at  n_rows       dur_h
+77528      Zakarpatska oblast 2025-11-19 08:28:49+00:00 2025-11-24 11:11:29+00:00       7  122.711111
+33264       Kharkivska oblast 2026-08-28 20:53:53+00:00 2026-09-02 19:01:50+00:00      26  118.132500
+23613         Donetska oblast 2026-08-28 21:10:55+00:00 2026-09-02 16:05:34+00:00       8  114.910833
+15691  Dnipropetrovska oblast 2026-08-28 21:20:20+00:00 2026-09-02 16:06:05+00:00      27  114.762500
+73112           Sumska oblast 2026-08-28 22:39:31+00:00 2026-09-02 15:17:42+00:00      14  112.636389
+85775        Zaporizka oblast 2026-08-28 21:20:14+00:00 2026-09-02 13:56:55+00:00       5  112.611389
+49680          Kyivska oblast 2026-08-29 00:29:56+00:00 2026-09-02 16:42:22+00:00      12  112.207222
+7705      Chernihivska oblast 2026-08-29 04:27:26+00:00 2026-09-02 16:41:59+00:00       5  108.242500
+44351    Kirovohradska oblast 2026-08-29 04:40:44+00:00 2026-09-02 13:58:29+00:00       4  105.295833
+23095         Donetska oblast 2026-02-20 18:47:46+00:00 2026-02-24 10:32:58+00:00       8   87.753333
+
+================================================================================
+4. Union event starts per month
+================================================================================
+started_at
+2022-03    1132
+2022-04    1869
+2022-05    1741
+2022-06    1454
+2022-07    1233
+2022-08    1582
+2022-09    1494
+2022-10    1540
+2022-11     929
+2022-12     994
+2023-01     931
+2023-02    1098
+2023-03    1393
+2023-04     790
+2023-05    1335
+2023-06    1370
+2023-07    1445
+2023-08    1916
+2023-09    1455
+2023-10    1512
+2023-11    1367
+2023-12    1633
+2024-01    1742
+2024-02    1430
+2024-03    2215
+2024-04    1753
+2024-05    2210
+2024-06    2030
+2024-07    1918
+2024-08    1895
+2024-09    1793
+2024-10    1693
+2024-11    1535
+2024-12    1421
+2025-01    1687
+2025-02    1537
+2025-03    1434
+2025-04    1526
+2025-05    1451
+2025-06    1569
+2025-07    1906
+2025-08    1768
+2025-09    1555
+2025-10    1498
+2025-11    1618
+2025-12    1686
+2026-01    1794
+2026-02    1608
+2026-03    2084
+2026-04    1930
+2026-05    2148
+2026-06    2029
+2026-07    2334
+2026-08    2302
+2026-09     451
+
+================================================================================
+5. Last 8 weeks: share of time with an active alarm, per oblast
+================================================================================
+Window: (2026-07-13 05:28:22+00:00, 2026-09-07 05:28:22+00:00]
+                         events_in_window  share_alarm_oblast+raion  share_alarm_oblast+raion+hromada
+oblast                                                                                               
+Odeska oblast                         523                     0.297                             0.297
+Mykolaivska oblast                    514                     0.315                             0.315
+Khersonska oblast                     370                     0.285                             0.285
+Poltavska oblast                      366                     0.373                             0.373
+Chernihivska oblast                   324                     0.700                             0.700
+Kirovohradska oblast                  291                     0.253                             0.253
+Kharkivska oblast                     275                     0.937                             0.940
+Sumska oblast                         261                     0.898                             0.898
+Zaporizka oblast                      223                     0.903                             0.903
+Kyivska oblast                        218                     0.279                             0.279
+Cherkaska oblast                      210                     0.149                             0.149
+Dnipropetrovska oblast                179                     0.941                             1.000
+Kyiv City                             153                     0.100                             0.100
+Donetska oblast                       115                     0.964                             0.995
+Zhytomyrska oblast                    101                     0.056                             0.056
+Vinnytska oblast                       79                     0.044                             0.044
+Khmelnytska oblast                     24                     0.012                             0.012
+Rivnenska oblast                       23                     0.009                             0.009
+Volynska oblast                        10                     0.002                             0.002
+Chernivetska oblast                    10                     0.006                             0.006
+Ternopilska oblast                     10                     0.004                             0.004
+Ivano-Frankivska oblast                 4                     0.002                             0.002
+Lvivska oblast                          3                     0.001                             0.001
+Zakarpatska oblast                      3                     0.001                             0.001
+
+================================================================================
+6. Output
+================================================================================
+Wrote 87,763 rows to data\processed\oblast_alarm_intervals.csv
+
+Done.

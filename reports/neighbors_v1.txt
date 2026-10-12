@@ -1,0 +1,71 @@
+
+================================================================================
+1. Adjacency checks
+================================================================================
+Oblasts: 24; undirected edges: 49; adjacency is symmetric by construction.
+Volynska oblast            2
+Rivnenska oblast           5
+Lvivska oblast             5
+Ternopilska oblast         5
+Khmelnytska oblast         5
+Zhytomyrska oblast         4
+Ivano-Frankivska oblast    4
+Zakarpatska oblast         2
+Chernivetska oblast        3
+Vinnytska oblast           6
+Kyivska oblast             6
+Cherkaska oblast           4
+Kirovohradska oblast       6
+Odeska oblast              3
+Poltavska oblast           7
+Chernihivska oblast        3
+Kyiv City                  1
+Sumska oblast              3
+Kharkivska oblast          4
+Dnipropetrovska oblast     7
+Donetska oblast            3
+Mykolaivska oblast         4
+Zaporizka oblast           3
+Khersonska oblast          3
+
+Borders to double-check on a map (short segments):
+  Dnipropetrovska oblast - Khersonska oblast
+  Dnipropetrovska oblast - Mykolaivska oblast
+  Kirovohradska oblast - Odeska oblast
+
+================================================================================
+2. Overview
+================================================================================
+Rows: 942,504; features: 8
+
+Missing values per feature (all rows):
+nb_n_active                   0
+nb_starts_1h                  0
+nb_starts_3h                  0
+nb_starts_6h                  0
+nb_starts_24h                 0
+nb_starts_168h                0
+nb_hours_since_last_start    36
+nb_alarm_share_24h            0
+
+Only nb_hours_since_last_start may be NA: no neighbour has started an alarm yet.
+
+================================================================================
+3. Distribution on eligible rows (no alarm at t, not quarantined)
+================================================================================
+Eligible rows: 795,817
+                              count    mean     std  min     25%     50%     75%      max
+nb_n_active                795817.0   0.272   0.681  0.0   0.000   0.000   0.000    7.000
+nb_starts_1h               795817.0   0.247   0.689  0.0   0.000   0.000   0.000   12.000
+nb_starts_3h               795817.0   0.882   1.578  0.0   0.000   0.000   1.000   21.000
+nb_starts_6h               795817.0   1.890   2.684  0.0   0.000   1.000   3.000   32.000
+nb_starts_24h              795817.0   8.110   8.428  0.0   1.000   6.000  13.000   72.000
+nb_starts_168h             795817.0  57.711  52.029  0.0  15.000  43.000  87.000  331.000
+nb_hours_since_last_start  795784.0  19.714  38.925  0.0   1.752   5.582  19.575  727.227
+nb_alarm_share_24h         795817.0   0.115   0.140  0.0   0.010   0.066   0.165    0.984
+
+================================================================================
+4. Output
+================================================================================
+Wrote 942,504 rows to data\processed\neighbor_features_v1.csv
+Done.

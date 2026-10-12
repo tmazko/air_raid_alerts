@@ -1,0 +1,5 @@
+pandas
+tzdata
+numpy==1.26.4
+scikit-learn
+lightgbm==4.6.0
